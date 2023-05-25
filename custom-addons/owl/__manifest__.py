@@ -6,10 +6,11 @@
     'sequence': -1,
     'description': """OWL Tutorial""",
     'category': 'OWL',
-    'depends' : ['base'],
+    'depends' : ['base', 'web'],
     'data': [
         'security/ir.model.access.csv',
-        'views/todo_list.xml'
+        'views/todo_list.xml',
+        'views/res_partner.xml',
     ],
     'demo': [
     ],
