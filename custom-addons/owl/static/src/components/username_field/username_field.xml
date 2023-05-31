@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl.UsernameField" owl="1">
+        <div class="input-group d-flex o_username_field">
+            <CharField t-props="props"/>
+            <span class="input-group-text border-0 rounded-0">@<span t-esc="emailDomain"/></span>
+        </div>
+    </t>
+</templates>
