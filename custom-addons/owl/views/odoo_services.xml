@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<data>
+    <record id="action_odoo_services" model="ir.actions.client">
+        <field name="name">Odoo Services</field>
+        <field name="tag">owl.OdooServices</field>
+    </record>
+
+    <menuitem id="menu_owl_odoo_services" name="Odoo Services" action="action_odoo_services" parent="owl.menu_owl_tutorial" sequence="30"/>
+
+    <record id="action_owl_dashboard" model="ir.actions.client">
+        <field name="name">OWL Dashboard Services</field>
+        <field name="tag">owl.Dashboard</field>
+    </record>
+
+    <menuitem id="menu_owl_dashboard" name="Dashboard" action="action_owl_dashboard" parent="owl.menu_owl_tutorial" sequence="0"/>
+</data>
+</odoo>

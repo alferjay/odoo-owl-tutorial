@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl.SimpleMail" owl="1">
+        <div class="o_simple_mail position-absolute top-0 bottom-0 w-100 h-100">
+            <div class="d-flex justify-content-center align-items-center h-100 w-100 bg-white bg-opacity-75">
+                <div class="o_simple_mail_wrapper bg-white border p-4 rounded shadow">
+                    <h2>Simple Mail Service</h2>
+                    <div class="my-3">
+                        <label class="form-label">
+                            Email From
+                        </label>
+                        <input class="form-control" type="email" t-att-value="props.email_from" readonly="1"/>
+                    </div>
+                    <div class="my-3">
+                        <label class="form-label">
+                            Email To
+                        </label>
+                        <input class="form-control" type="email" t-model="state.email_to"/>
+                    </div>
+                    <div class="my-3">
+                        <label class="form-label">
+                            Subject
+                        </label>
+                        <input class="form-control" type="text" t-model="state.subject"/>
+                    </div>
+                    <div class="my-3">
+                        <label class="form-label">
+                            Message
+                        </label>
+                        <textarea class="form-control" rows="3" t-model="state.message"/>
+                    </div>
+
+                    <div class="d-flex">
+                        <button class="btn btn-primary ms-auto me-2" t-on-click="()=>props.send(state)">Send</button>
+                        <button class="btn btn-secondary" t-on-click="props.close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

@@ -11,6 +11,7 @@
         'security/ir.model.access.csv',
         'views/todo_list.xml',
         'views/res_partner.xml',
+        'views/odoo_services.xml',
     ],
     'demo': [
     ],
