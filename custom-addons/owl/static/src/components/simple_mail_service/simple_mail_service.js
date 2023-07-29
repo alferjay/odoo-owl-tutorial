@@ -11,7 +11,13 @@ export const simpleMailService = {
         const user_email = await orm.searchRead("res.partner", [["id", "=", user.partnerId]], ["email"])
         console.log("user email", user_email)
 
-        let simple_mail = reactive({1: {message:"asdfas dfasdf"}, 2: {message:"asdfas dfasdf"}})
+        let simple_mail = reactive({
+            isActive: false,
+            open,
+            close,
+            send,
+            email_from: user_email[0].email
+        })
 
         registry.category("main_components").add("SimpleMailContainer", {
             Component: SimpleMailContainer,
