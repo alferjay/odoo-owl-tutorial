@@ -7,9 +7,9 @@ const { reactive } = owl
 export const simpleMailService = {
     dependencies:["orm", "user", "rpc","notification"],
     async start(env, { orm, user, rpc, notification }){
-        console.log("user service", user)
+//        console.log("user service", user)
         const user_email = await orm.searchRead("res.partner", [["id", "=", user.partnerId]], ["email"])
-        console.log("user email", user_email)
+//        console.log("user email", user_email)
 
         let simple_mail = reactive({
             isActive: false,

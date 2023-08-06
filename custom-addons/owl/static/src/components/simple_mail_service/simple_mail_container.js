@@ -4,7 +4,7 @@ const { Component, xml, useState } = owl
 
 export class SimpleMailContainer extends Component {
     setup(){
-        console.log("This is a simple mail container.", this.props)
+//        console.log("This is a simple mail container.", this.props)
         this.state = useState(this.props.simple_mail)
     }
 }
