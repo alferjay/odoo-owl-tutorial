@@ -1,0 +1,18 @@
+.favorite-products-container {
+    background: #ccc;
+    padding: 10px;
+    min-height: 200px;
+}
+
+.favorite-products {
+    display: flex;
+    flex-wrap: wrap;
+
+    .product {
+        background: #ccc;
+        padding: 3px;
+        flex-shrink: 1;
+        flex-grow: 0;
+        flex-basis: 80px;
+    }
+}

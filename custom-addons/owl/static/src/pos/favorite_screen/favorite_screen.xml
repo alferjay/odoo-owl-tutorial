@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="FavoriteProductScreen" owl="1">
+        <div class="favorite-product-screen screen">
+            <div class="screen-header">
+                <div>
+                    <h1>This is Favorite Product Screen</h1>
+                    <p>Date: <span t-esc="date"/></p>
+                    <p>Popup Message: <span t-esc="this.env.pos.popupMessage"/></p>
+                </div>
+                <div class="large-buttons">
+                    <button t-on-click="()=>this.showScreen('ProductScreen')">Go Back</button>
+                    <button class="red" t-on-click="()=>this.markFavorite(state.activeProduct)">Mark as <br/>Favorite</button>
+                    <button class="orange" t-on-click="()=>this.markNotFavorite(state.activeProduct)">Mark as <br/>Not Favorite</button>
+                    <button class="blue" t-on-click="getProducts">Toggle Favorites</button>
+                </div>
+            </div>
+            <div class="favorite-content">
+                <div class="left-pane">
+                    <table class="favorite-list">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="state.products" t-as="product" t-key="product.id">
+                                <tr t-on-click="()=> this.setActiveProduct(product)">
+                                    <td>
+                                        <t t-if="product.default_code">
+                                            [<span t-esc="product.default_code"/>]
+                                        </t>
+                                        <span t-esc="product.display_name"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="right-pane">
+                    <div class="selected-product">
+                        <h1>Product Details</h1>
+                        <p>
+                            Name: <span t-esc="state.activeProduct.display_name"/><br/>
+                            Code: <span t-esc="state.activeProduct.default_code"/><br/>
+                            Price: <span t-esc="state.activeProduct.lst_price"/>
+                        </p>
+                    </div>
+                    <div class="pads">
+                        <div class="control-buttons">
+                            <MessagePopupButton/>
+                        </div>
+                        <div class="subpads">
+                            <t t-set="_actionName">Custom Action</t>
+                            <ActionpadWidget actionName="_actionName"/>
+                            <NumpadWidget />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

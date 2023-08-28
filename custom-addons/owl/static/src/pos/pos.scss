@@ -1,0 +1,28 @@
+.pos .pos-logo {
+    height: 80%;
+}
+
+.pos .pos-topheader {
+    background: #011801;
+}
+
+.pos .rightpane {
+    background: white;
+}
+
+.pos .order {
+    background: #01180a;
+    color: white;
+}
+
+.pos .order .orderline .info-list, .pos .order .orderline .info-list em {
+    color: #cccccc;
+}
+
+.pos .leftpane {
+    order: 2;
+}
+
+.pos .rightpane {
+    order: 1;
+}

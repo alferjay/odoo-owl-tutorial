@@ -6,7 +6,7 @@
     'sequence': -1,
     'description': """OWL Tutorial""",
     'category': 'OWL',
-    'depends' : ['base', 'web'],
+    'depends' : ['base', 'web', 'point_of_sale'],
     'data': [
         'security/ir.model.access.csv',
         'views/todo_list.xml',
@@ -23,5 +23,10 @@
             'owl/static/src/components/*/*.xml',
             'owl/static/src/components/*/*.scss',
         ],
+        'point_of_sale.assets': [
+            'owl/static/src/pos/**/*.js',
+            'owl/static/src/pos/**/*.xml',
+            'owl/static/src/pos/**/*.scss',
+        ]
     },
 }

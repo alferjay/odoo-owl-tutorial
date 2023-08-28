@@ -10,9 +10,9 @@ export const owlDashboardService = {
 
         Object.assign(dashboard_data, await rpc("/owl/dashboard_service/"))
 
-        setInterval(async ()=>{
-            Object.assign(dashboard_data, await rpc("/owl/dashboard_service/"))
-        }, 5000)
+//        setInterval(async ()=>{
+//            Object.assign(dashboard_data, await rpc("/owl/dashboard_service/"))
+//        }, 5000)
 
         async function getDashboardData(){
             return await rpc("/owl/dashboard_service/")
