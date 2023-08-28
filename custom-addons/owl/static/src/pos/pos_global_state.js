@@ -8,6 +8,7 @@ const PosGlobalStateInherit = (models) => class extends models {
         super(obj);
         console.log("Inherited PosGlobalState")
         this.favorite_products = this.getFavoriteProducts()
+        this.popupMessage = ""
     }
 
     async getFavoriteProducts(){
@@ -18,6 +19,10 @@ const PosGlobalStateInherit = (models) => class extends models {
         })
 
         return data
+    }
+
+    async setFavoriteProducts(){
+        this.favorite_products = await this.getFavoriteProducts()
     }
 }
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="MessagePopup" owl="1">
+        <Draggable>
+            <div class="popup popup-textinput">
+                <header class="title drag-handle">
+                    Message Popup
+                </header>
+                <div class="body">
+                    <input type="text" placeholder="Message" t-model="state.text_value" t-ref="text-value"/>
+                </div>
+                <div class="footer">
+                    <div class="button confirm highlight" t-on-click="confirm">
+                        Confirm
+                    </div>
+                    <div class="button cancel" t-on-click="cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </Draggable>
+    </t>
+
+</templates>
