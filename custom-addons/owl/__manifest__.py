@@ -12,6 +12,7 @@
         'views/todo_list.xml',
         'views/res_partner.xml',
         'views/odoo_services.xml',
+        'views/external_libraries.xml',
     ],
     'demo': [
     ],
